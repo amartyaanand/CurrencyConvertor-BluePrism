@@ -1,0 +1,89 @@
+﻿<process name="Currency Convertor Process" version="1.0" bpversion="6.9.0.26970" narrative="Process for currency convertor." byrefcollection="true" preferredid="58780cee-5342-4440-b7c6-1f9aebe3085a">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="e80ae91c-92bf-46bf-a420-451622abf5ec" type="Normal" published="False">
+    <name>Write in Excel</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="4e9e14fa-d725-4714-b826-8861476a668f" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>e683fc63-c97c-49fb-b8ee-29b91c5f2caa</onsuccess>
+  </stage>
+  <stage stageid="64f6db0e-c576-497b-9e9f-f7256877e6e0" name="End" type="End">
+    <display x="15" y="135" />
+  </stage>
+  <stage stageid="bc45e4e1-b885-4ecb-9bf6-22c5ec00e356" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="e683fc63-c97c-49fb-b8ee-29b91c5f2caa" name="Currency Convertor::Launch" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="90" y="-105" />
+    <onsuccess>5d495982-3ac1-419a-a82a-3d5d1cb384d9</onsuccess>
+    <resource object="Currency Convertor" action="Launch" />
+  </stage>
+  <stage stageid="5d495982-3ac1-419a-a82a-3d5d1cb384d9" name="Currency Convertor::Input Format" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="165" y="-105" />
+    <onsuccess>cd1eb2dd-891b-4bb8-a478-0786470f7427</onsuccess>
+    <resource object="Currency Convertor" action="Input Format" />
+  </stage>
+  <stage stageid="cd1eb2dd-891b-4bb8-a478-0786470f7427" name="Currency Convertor::Output Format" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="165" y="-45" />
+    <onsuccess>f79a5022-9af0-49f1-a44d-7feaa44ace05</onsuccess>
+    <resource object="Currency Convertor" action="Output Format" />
+  </stage>
+  <stage stageid="f79a5022-9af0-49f1-a44d-7feaa44ace05" name="Currency Convertor::Amount" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="165" y="15" />
+    <onsuccess>61f5ce5d-995d-42d6-80ce-736ff677f82e</onsuccess>
+    <resource object="Currency Convertor" action="Amount" />
+  </stage>
+  <stage stageid="61f5ce5d-995d-42d6-80ce-736ff677f82e" name="Currency Convertor::Click Go" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="165" y="75" />
+    <onsuccess>efe92dcb-2ecd-4874-b84b-d6616ceccb6a</onsuccess>
+    <resource object="Currency Convertor" action="Click Go" />
+  </stage>
+  <stage stageid="efe92dcb-2ecd-4874-b84b-d6616ceccb6a" name="Currency Convertor::Read Result" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="165" y="135" />
+    <onsuccess>7e1a2ce1-4096-44d0-9841-a86335d10102</onsuccess>
+    <resource object="Currency Convertor" action="Read Result" />
+  </stage>
+  <stage stageid="7e1a2ce1-4096-44d0-9841-a86335d10102" name="Currency Convertor::Back To Homepage" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="90" y="135" />
+    <onsuccess>64f6db0e-c576-497b-9e9f-f7256877e6e0</onsuccess>
+    <resource object="Currency Convertor" action="Back To Homepage" />
+  </stage>
+  <stage stageid="bd295295-7fcc-4ce4-92ce-91f13c78ea50" name="Write in Excel" type="SubSheetInfo">
+    <subsheetid>e80ae91c-92bf-46bf-a420-451622abf5ec</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="0494e045-f9aa-4f2e-8400-eb685cfe1fad" name="Start" type="Start">
+    <subsheetid>e80ae91c-92bf-46bf-a420-451622abf5ec</subsheetid>
+    <display x="15" y="-105" />
+    <onsuccess>ac091dc5-5d5d-4870-9625-6c90374629a0</onsuccess>
+  </stage>
+  <stage stageid="7b5cf656-ce62-4003-a53e-74789c852924" name="End" type="End">
+    <subsheetid>e80ae91c-92bf-46bf-a420-451622abf5ec</subsheetid>
+    <display x="15" y="15" />
+  </stage>
+  <stage stageid="ac091dc5-5d5d-4870-9625-6c90374629a0" name="Currency Convertor::Execute" type="Action">
+    <subsheetid>e80ae91c-92bf-46bf-a420-451622abf5ec</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-45" />
+    <onsuccess>7b5cf656-ce62-4003-a53e-74789c852924</onsuccess>
+    <resource object="Currency Convertor" action="Execute" />
+  </stage>
+</process>
